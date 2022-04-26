@@ -5,6 +5,17 @@ TagManager:
   serializedVersion: 2
   tags:
   - Activator
+  - Water
+  - Killer
+  - Mercury
+  - Oil
+  - Vial
+  - Gold
+  - Lead
+  - Bugs
+  - Salt
+  - Phos
+  - Arsenic
   layers:
   - Default
   - TransparentFX
@@ -12,7 +23,7 @@ TagManager:
   - 
   - Water
   - UI
-  - 
+  - Fluids
   - 
   - 
   - 
