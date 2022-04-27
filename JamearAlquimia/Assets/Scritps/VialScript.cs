@@ -8,9 +8,17 @@ public class VialScript : MonoBehaviour
     private int oilCounter;
     private int mercuryCounter;
 
+    private int saltCounter;
+    private int arsenicCounter;
+    private int phosCounter;
+
     public GameObject waterFiller;
     public GameObject oilFiller;
     public GameObject mercuryFiller;
+
+    public GameObject saltFiller;
+    public GameObject arsenicFiller;
+    public GameObject phosFiller;
 
     public GameObject topStop;
 
@@ -22,9 +30,17 @@ public class VialScript : MonoBehaviour
         oilCounter = 0;
         mercuryCounter = 0;
 
+        saltCounter = 0;
+        arsenicCounter = 0;
+        phosCounter = 0;
+
         waterFiller.SetActive(false);
         oilFiller.SetActive(false);
         mercuryFiller.SetActive(false);
+
+        saltFiller.SetActive(false);
+        arsenicFiller.SetActive(false);
+        phosFiller.SetActive(false);
 
         topStop.SetActive(false);
 
@@ -62,6 +78,36 @@ public class VialScript : MonoBehaviour
                 {
                     topStop.SetActive(true);
                     mercuryFiller.SetActive(true);
+                    isFull = true;
+                }
+            }
+            if (collision.gameObject.tag == "Salt")
+            {
+                saltCounter++;
+                if (saltCounter == 5)
+                {
+                    topStop.SetActive(true);
+                    saltFiller.SetActive(true);
+                    isFull = true;
+                }
+            }
+            if (collision.gameObject.tag == "Arsenic")
+            {
+                arsenicCounter++;
+                if (arsenicCounter == 5)
+                {
+                    topStop.SetActive(true);
+                    arsenicFiller.SetActive(true);
+                    isFull = true;
+                }
+            }
+            if (collision.gameObject.tag == "Phos")
+            {
+                phosCounter++;
+                if (phosCounter == 5)
+                {
+                    topStop.SetActive(true);
+                    phosFiller.SetActive(true);
                     isFull = true;
                 }
             }

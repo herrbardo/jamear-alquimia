@@ -16,6 +16,7 @@ TagManager:
   - Salt
   - Phos
   - Arsenic
+  - PowderDropper
   layers:
   - Default
   - TransparentFX

@@ -18,5 +18,17 @@ public class ParticleKiller : MonoBehaviour
         {
             Destroy(collision.gameObject);
         }
+        if (collision.collider.tag == "Salt")
+        {
+            Destroy(collision.gameObject);
+        }
+        if (collision.collider.tag == "Phos")
+        {
+            Destroy(collision.gameObject);
+        }
+        if (collision.collider.tag == "Arsenic")
+        {
+            Destroy(collision.gameObject);
+        }
     }
 }
