@@ -102,6 +102,8 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  Animator: {fileID: 6687909531422315851}
+  SpriteRenderer: {fileID: 4299808946859333295}
 --- !u!95 &6687909531422315851
 Animator:
   serializedVersion: 3
