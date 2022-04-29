@@ -30,7 +30,7 @@ public class PotionSelector : MonoBehaviour
         if(Potions.Count == 0)
             return;
 
-        int randomIndex = Random.Range(0, Potions.Count - 1);
+        int randomIndex = Random.Range(0, Potions.Count);
         currentPotion = Potions[randomIndex];
 
         PotionRenderer.sprite = currentPotion.Icon;

@@ -44,8 +44,8 @@ public class CustomerStateManager : MonoBehaviour
         SetState(new CustomerStateArriving(this, SpotToBuy));
     }
 
-    public void SetBuying()
+    public void SetWaiting()
     {
-
+        SetState(new CustomerStateWaiting(this));
     }
 }
