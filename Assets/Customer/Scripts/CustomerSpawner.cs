@@ -6,10 +6,11 @@ public class CustomerSpawner : MonoBehaviour
 {
     [SerializeField] GameObject CustomerPrefab;
     [SerializeField] Transform SpotToBuy;
+    [SerializeField] float DelayToStart;
 
     void Start()
     {
-        Invoke("SpawnCustomer", 2f);
+        Invoke("SpawnCustomer", DelayToStart);
     }
 
     
@@ -18,7 +19,7 @@ public class CustomerSpawner : MonoBehaviour
         
     }
 
-    void SpawnCustomer()
+    public void SpawnCustomer()
     {
         GameObject newCustomer = Instantiate(CustomerPrefab, this.transform.position, Quaternion.identity);
         CustomerStateManager manager = newCustomer.GetComponent<CustomerStateManager>();

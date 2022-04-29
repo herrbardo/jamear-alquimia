@@ -57,6 +57,9 @@ TagManager:
   - name: Customers
     uniqueID: 2335540397
     locked: 0
+  - name: Bubbles
+    uniqueID: 4185873651
+    locked: 0
   - name: Room
     uniqueID: 1518757789
     locked: 0
