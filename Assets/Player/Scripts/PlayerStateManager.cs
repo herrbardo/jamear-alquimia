@@ -6,6 +6,10 @@ public class PlayerStateManager : MonoBehaviour
 {
     [SerializeField] public float MovementSpeed;
     [SerializeField] List<Transform> Spots;
+    [SerializeField] public Animator Animator;
+    [SerializeField] public SpriteRenderer SpriteRenderer;
+
+    public bool FacingRight { get; private set; }
 
     PlayerStateBase currentState;
     int currentSpotIndex;
@@ -14,6 +18,7 @@ public class PlayerStateManager : MonoBehaviour
     {
         currentState = new PlayerStateIdle(this);
         currentSpotIndex = 0;
+        FacingRight = true;
     }
 
     private void Awake()
@@ -40,9 +45,15 @@ public class PlayerStateManager : MonoBehaviour
     void Button_Click(string buttonName)
     {
         if(buttonName == "BtnRight" && currentSpotIndex < (Spots.Count - 1 ))
+        {
             currentSpotIndex++;
+            FacingRight = true;
+        }
         else if(buttonName == "BtnLeft" && currentSpotIndex > 0)
+        {
             currentSpotIndex--;
+            FacingRight = false;
+        }
 
         Transform currentSpot = Spots[currentSpotIndex];
         SetState(new PlayerStateMoving(this, currentSpot));

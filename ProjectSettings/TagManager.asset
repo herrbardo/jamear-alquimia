@@ -60,6 +60,9 @@ TagManager:
   - name: Room
     uniqueID: 1518757789
     locked: 0
+  - name: Maquinas
+    uniqueID: 1662974877
+    locked: 0
   - name: Player
     uniqueID: 2033463365
     locked: 0

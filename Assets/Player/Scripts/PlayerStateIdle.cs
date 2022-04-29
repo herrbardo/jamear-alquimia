@@ -9,7 +9,11 @@ public class PlayerStateIdle: PlayerStateBase
         this.Context = context;
     }
 
-    public override void EnterState(){}
+    public override void EnterState()
+    {
+        this.Context.SpriteRenderer.flipX = false;
+    }
+
     public override void ExitState(){}
 
 

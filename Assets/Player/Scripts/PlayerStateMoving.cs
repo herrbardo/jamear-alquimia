@@ -12,8 +12,16 @@ public class PlayerStateMoving : PlayerStateBase
         this.targetToMove = target;
     }
 
-    public override void EnterState(){}
-    public override void ExitState(){}
+    public override void EnterState()
+    {
+        this.Context.Animator.SetBool("IsWalking", true);
+        this.Context.SpriteRenderer.flipX = !this.Context.FacingRight;
+    }
+
+    public override void ExitState()
+    {
+        this.Context.Animator.SetBool("IsWalking", false);
+    }
 
 
     public override void AwakeState(){}
