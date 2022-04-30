@@ -168,7 +168,7 @@ HingeJoint2D:
   m_BreakTorque: Infinity
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0, y: 0}
-  m_ConnectedAnchor: {x: 0.34699917, y: 0}
+  m_ConnectedAnchor: {x: 0.34700012, y: 0}
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0
@@ -191,7 +191,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rb: {fileID: 0}
   onUseDrag: 0
-  onIdleDrag: 0
+  onIdleDrag: 500
 --- !u!1 &2962561619512043976
 GameObject:
   m_ObjectHideFlags: 0
@@ -325,6 +325,7 @@ GameObject:
   - component: {fileID: 2962561619542165004}
   - component: {fileID: 2962561619542165005}
   - component: {fileID: 2962561619542165106}
+  - component: {fileID: 8756956480639093535}
   m_Layer: 0
   m_Name: Manivela
   m_TagString: Untagged
@@ -443,6 +444,21 @@ HingeJoint2D:
   m_AngleLimits:
     m_LowerAngle: 0
     m_UpperAngle: 359
+--- !u!114 &8756956480639093535
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2962561619542165006}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c49330bc306aa5445bcca81385d301aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rb: {fileID: 0}
+  rbGearRight: {fileID: 2962561619512043983}
+  rbGearLeft: {fileID: 2962561620362978704}
 --- !u!1 &2962561620362978733
 GameObject:
   m_ObjectHideFlags: 0
