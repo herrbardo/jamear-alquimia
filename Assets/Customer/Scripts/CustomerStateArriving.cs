@@ -51,6 +51,7 @@ public class CustomerStateArriving : CustomerStateBase
         {
             this.Context.transform.position = targetToArrive.position;
             this.Context.SetBuying();
+            GameEvents.GetInstance().OnCustomerReachedSpot();
         }
     }
 }

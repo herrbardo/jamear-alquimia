@@ -45,3 +45,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CustomerPrefab: {fileID: 3533928822160715601, guid: d792bc32bc52cbd43b3522eb2b6b0c24, type: 3}
   SpotToBuy: {fileID: 0}
+  DelayToStart: 1
