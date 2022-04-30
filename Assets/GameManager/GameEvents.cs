@@ -16,12 +16,20 @@ public class GameEvents
     }
 
     public delegate void CustomerReachedSpotDelegate();
+    public delegate void PotionUnlockedDelegate(Potions potion);
 
     public event CustomerReachedSpotDelegate CustomerReachedSpot;
+    public event PotionUnlockedDelegate PotionUnlocked;
 
     public void OnCustomerReachedSpot()
     {
         if(CustomerReachedSpot!= null)
             CustomerReachedSpot();
+    }
+
+    public void OnPotionUnlocked(Potions potion)
+    {
+        if(PotionUnlocked != null)
+            PotionUnlocked(potion);
     }
 }
