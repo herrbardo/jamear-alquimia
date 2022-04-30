@@ -9,4 +9,5 @@ public class PotionItem : ScriptableObject
     [SerializeField] public Sprite Icon;
     [SerializeField] public string Tooltip;
     [SerializeField] public Potions Type;
+    [SerializeField] public string Recipe;
 }

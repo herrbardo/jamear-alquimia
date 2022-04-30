@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.Text;
 
 public class PotionSlot : MonoBehaviour
 {
@@ -9,8 +10,12 @@ public class PotionSlot : MonoBehaviour
 
     public void SetPotion(PotionItem item)
     {
+        StringBuilder text = new StringBuilder();
+        text.AppendLine(item.Type.ToString());
+        text.AppendLine(item.Tooltip);
+        text.AppendLine(item.Recipe);
+
         this.Sprite.sprite = item.Icon;
-        this.Tooltip.infoLeft = item.Type.ToString();
-        this.Tooltip.infoRight = item.Tooltip;
+        this.Tooltip.infoLeft = text.ToString();
     }
 }
