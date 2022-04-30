@@ -9,6 +9,7 @@ public class RecipesManager : MonoBehaviour
     [SerializeField] List<PotionItem> Potions;
 
     int lastIndexUnlocked;
+    List<Potions> unlockedPotions;
 
 
     private void Awake()
@@ -24,6 +25,7 @@ public class RecipesManager : MonoBehaviour
     void Start()
     {
         lastIndexUnlocked = -1;
+        unlockedPotions = new List<Potions>();
     }
 
     void PotionUnlocked(Potions potion)
@@ -39,6 +41,10 @@ public class RecipesManager : MonoBehaviour
             return;
         }
         
+        if(unlockedPotions.Contains(potion))
+            return;
+        
         slotManager.SetPotion(currentPotion);
+        unlockedPotions.Add(potion);
     }
 }
