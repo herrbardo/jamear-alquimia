@@ -11,6 +11,6 @@ public enum Potions
     Invisibility,
     Love,
     Weakness,
-    Luck,
+    Fortune,
     Antidote
 }

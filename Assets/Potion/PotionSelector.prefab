@@ -183,3 +183,10 @@ MonoBehaviour:
   Potions:
   - {fileID: 11400000, guid: e01098ce280a4bb429866a91fd0dbd19, type: 2}
   - {fileID: 11400000, guid: f94981fae43bcb041aafd0fad211361b, type: 2}
+  - {fileID: 11400000, guid: ed815139da3a8aa41824b7373de73221, type: 2}
+  - {fileID: 11400000, guid: 5405a0775230b9f4d972433a1f5915e7, type: 2}
+  - {fileID: 11400000, guid: 5837c5ec28ce41e409a84578014458e7, type: 2}
+  - {fileID: 11400000, guid: 1d2de83c5a3a48840a9e6c89ba31544a, type: 2}
+  - {fileID: 11400000, guid: 900c9cad7325cfd439acc13265d4c386, type: 2}
+  - {fileID: 11400000, guid: e4e1d0a8900d76a4799b7f667417436c, type: 2}
+  - {fileID: 11400000, guid: 814a574d7d2d4fc4abcbbcfd8784245d, type: 2}
