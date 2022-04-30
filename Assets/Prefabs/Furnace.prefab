@@ -5034,7 +5034,7 @@ GameObject:
   - component: {fileID: 7019798045942172537}
   - component: {fileID: 7019798045942172534}
   - component: {fileID: 7019798045942172535}
-  - component: {fileID: 7019798045942172532}
+  - component: {fileID: 1930983808521341414}
   m_Layer: 0
   m_Name: OvenDoor
   m_TagString: Untagged
@@ -5169,7 +5169,7 @@ HingeJoint2D:
   m_BreakTorque: Infinity
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: -1.3151577, y: 0.075516485}
-  m_ConnectedAnchor: {x: 25.933155, y: -2.944452}
+  m_ConnectedAnchor: {x: 25.963154, y: -2.994452}
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0
@@ -5178,7 +5178,7 @@ HingeJoint2D:
   m_AngleLimits:
     m_LowerAngle: 0
     m_UpperAngle: -90
---- !u!114 &7019798045942172532
+--- !u!114 &1930983808521341414
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -5187,10 +5187,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 7019798045942172530}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1f5eba34252243748addd16c0338b57f, type: 3}
+  m_Script: {fileID: 11500000, guid: 898c533899bdce34d90b38398f5df601, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rb: {fileID: 7019798045942172534}
+  rb: {fileID: 0}
+  onUseDrag: 3
+  onIdleDrag: 1000
 --- !u!1 &7189067765128526564
 GameObject:
   m_ObjectHideFlags: 0

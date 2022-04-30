@@ -34,7 +34,7 @@ public class FurnaceScript : MonoBehaviour
             temperature--;
             //temperatureSlider.transform.localScale -= new Vector3(0, Mathf.Lerp(0, 1f, temperature/3), 0);
         }
-        Debug.Log(temperature);
+        
         if (temperature <= 0f)
         {
             temperatureSlider.transform.localScale = new Vector3(0.64f, 1f, 1f);
