@@ -6,6 +6,7 @@ using UnityEngine.UI;
 [CreateAssetMenu(fileName = "NewPotion", menuName = "ScriptableObjects/Herrbardo/PotionItem", order = 1)]
 public class PotionItem : ScriptableObject
 {
-    [SerializeField] public string Name;
     [SerializeField] public Sprite Icon;
+    [SerializeField] public string Tooltip;
+    [SerializeField] public Potions Type;
 }

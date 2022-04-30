@@ -50,7 +50,7 @@ public class CustomerStateArriving : CustomerStateBase
         if(diffX < .1f)
         {
             this.Context.transform.position = targetToArrive.position;
-            this.Context.SetBuying();
+            this.Context.SetWaiting();
             GameEvents.GetInstance().OnCustomerReachedSpot();
         }
     }
