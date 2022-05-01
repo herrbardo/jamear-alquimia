@@ -9,31 +9,27 @@ public class VialScript : MonoBehaviour
     [SerializeField] float DelayToClose;
     [SerializeField] float TimeToFillLiquid;
     [SerializeField] SimpleTooltip Tooltip;
+    [NonSerialized] public bool IsAttached;
+    [SerializeField] GameObject WaterFiller;
+    [SerializeField] GameObject OilFiller;
+    [SerializeField] GameObject MercuryFiller;
+    [SerializeField] GameObject SaltFiller;
+    [SerializeField] GameObject ArsenicFiller;
+    [SerializeField] GameObject PhosFiller;
+    [SerializeField] GameObject TopStop;
 
-    public GameObject waterFiller;
-    public GameObject oilFiller;
-    public GameObject mercuryFiller;
-
-    public GameObject saltFiller;
-    public GameObject arsenicFiller;
-    public GameObject phosFiller;
-
-    public GameObject topStop;
-
-    private bool isFull;
+    bool isFull;
     float collisionTime;
 
     void Start()
     {
-        waterFiller.SetActive(false);
-        oilFiller.SetActive(false);
-        mercuryFiller.SetActive(false);
-
-        saltFiller.SetActive(false);
-        arsenicFiller.SetActive(false);
-        phosFiller.SetActive(false);
-
-        topStop.SetActive(false);
+        WaterFiller.SetActive(false);
+        OilFiller.SetActive(false);
+        MercuryFiller.SetActive(false);
+        SaltFiller.SetActive(false);
+        ArsenicFiller.SetActive(false);
+        PhosFiller.SetActive(false);
+        TopStop.SetActive(false);
 
         isFull = false;
     }
@@ -51,6 +47,7 @@ public class VialScript : MonoBehaviour
         if(elements.Contains(otherTag))
         {
             Tooltip.infoLeft = otherTag;
+            collision.gameObject.transform.parent = this.transform;
             Invoke("SetFull", DelayToClose);
         }
         else if(powders.Contains(otherTag))
@@ -72,18 +69,18 @@ public class VialScript : MonoBehaviour
 
     void SetFull()
     {
-        topStop.SetActive(true);
+        TopStop.SetActive(true);
         isFull = true;
     }
 
     void SetFull(Powder powder)
     {
         if(powder == Powder.Salt)
-            saltFiller.SetActive(true);
+            SaltFiller.SetActive(true);
         else if(powder == Powder.Arsenic)
-            arsenicFiller.SetActive(true);
+            ArsenicFiller.SetActive(true);
         else if(powder == Powder.Phos)
-            phosFiller.SetActive(true);
+            PhosFiller.SetActive(true);
 
         Tooltip.infoLeft = powder.ToString();
         SetFull();
@@ -92,13 +89,24 @@ public class VialScript : MonoBehaviour
     void SetFull(Liquid liquid)
     {
         if(liquid == Liquid.Water)
-            waterFiller.SetActive(true);
+            WaterFiller.SetActive(true);
         else if(liquid == Liquid.Oil)
-            oilFiller.SetActive(true);
+            OilFiller.SetActive(true);
         else if(liquid == Liquid.Mercury)
-            mercuryFiller.SetActive(true);
+            MercuryFiller.SetActive(true);
         
         Tooltip.infoLeft = liquid.ToString();
         SetFull();
+    }
+
+    private void OnMouseDown()
+    {
+        if(IsAttached)
+        {
+            InventorySlotManager slot = this.transform.parent.GetComponent<InventorySlotManager>();
+            slot.RemoveItem();
+            this.transform.parent = null;
+            IsAttached = false;
+        }
     }
 }

@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6480661085812307791}
   - component: {fileID: 7499787016292096913}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: ArsenicFill
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -68,9 +68,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingLayerID: -545349899
+  m_SortingLayer: 5
+  m_SortingOrder: 1
   m_Sprite: {fileID: -4625282147638124589, guid: d91aa6147843e2c41a588d86fab62c92, type: 3}
   m_Color: {r: 0.83921576, g: 0.64705884, b: 0.43921572, a: 1}
   m_FlipX: 0
@@ -128,7 +128,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1234832756883401085}
   - component: {fileID: 1234832756883401086}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: MercuryFill
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -186,9 +186,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingLayerID: -545349899
+  m_SortingLayer: 5
+  m_SortingOrder: 1
   m_Sprite: {fileID: -4625282147638124589, guid: d91aa6147843e2c41a588d86fab62c92, type: 3}
   m_Color: {r: 0.6509804, g: 0.6509804, b: 0.6509804, a: 1}
   m_FlipX: 0
@@ -210,7 +210,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1234832757017723108}
   - component: {fileID: 1234832757017723107}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: WaterFill
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -268,9 +268,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingLayerID: -545349899
+  m_SortingLayer: 5
+  m_SortingOrder: 1
   m_Sprite: {fileID: -4625282147638124589, guid: d91aa6147843e2c41a588d86fab62c92, type: 3}
   m_Color: {r: 0, g: 0.6509804, b: 1, a: 1}
   m_FlipX: 0
@@ -535,13 +535,13 @@ MonoBehaviour:
   DelayToClose: 0.5
   TimeToFillLiquid: 1.5
   Tooltip: {fileID: 2902792581395235414}
-  waterFiller: {fileID: 1234832757017723109}
-  oilFiller: {fileID: 1234832758389876219}
-  mercuryFiller: {fileID: 1234832756883401087}
-  saltFiller: {fileID: 7922052302342724855}
-  arsenicFiller: {fileID: 1130902537009295959}
-  phosFiller: {fileID: 7175216524932353563}
-  topStop: {fileID: 1234832757344343543}
+  WaterFiller: {fileID: 1234832757017723109}
+  OilFiller: {fileID: 1234832758389876219}
+  MercuryFiller: {fileID: 1234832756883401087}
+  SaltFiller: {fileID: 7922052302342724855}
+  ArsenicFiller: {fileID: 1130902537009295959}
+  PhosFiller: {fileID: 7175216524932353563}
+  TopStop: {fileID: 1234832757344343543}
 --- !u!114 &2902792581395235414
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -637,7 +637,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1234832758389876218}
   - component: {fileID: 1234832758389876217}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: OilFill
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -695,9 +695,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingLayerID: -545349899
+  m_SortingLayer: 5
+  m_SortingOrder: 1
   m_Sprite: {fileID: -4625282147638124589, guid: d91aa6147843e2c41a588d86fab62c92, type: 3}
   m_Color: {r: 0.9058824, g: 1, b: 0.44705886, a: 1}
   m_FlipX: 0
@@ -777,9 +777,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 2
+  m_SortingLayerID: -545349899
+  m_SortingLayer: 5
+  m_SortingOrder: 1
   m_Sprite: {fileID: -6832293251284896983, guid: d91aa6147843e2c41a588d86fab62c92, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -859,8 +859,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -545349899
+  m_SortingLayer: 5
   m_SortingOrder: 0
   m_Sprite: {fileID: -548402691523525994, guid: d91aa6147843e2c41a588d86fab62c92, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -883,7 +883,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1695373394693397932}
   - component: {fileID: 4672845232871698989}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: PhosFill
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -941,9 +941,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingLayerID: -545349899
+  m_SortingLayer: 5
+  m_SortingOrder: 1
   m_Sprite: {fileID: -4625282147638124589, guid: d91aa6147843e2c41a588d86fab62c92, type: 3}
   m_Color: {r: 0.83921576, g: 0.34509805, b: 0.34509805, a: 1}
   m_FlipX: 0
@@ -965,7 +965,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1682224434514284137}
   - component: {fileID: 3488998401604126929}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: SaltFill
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1023,9 +1023,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingLayerID: -545349899
+  m_SortingLayer: 5
+  m_SortingOrder: 1
   m_Sprite: {fileID: -4625282147638124589, guid: d91aa6147843e2c41a588d86fab62c92, type: 3}
   m_Color: {r: 0.64705884, g: 0.64705884, b: 0.64705884, a: 1}
   m_FlipX: 0

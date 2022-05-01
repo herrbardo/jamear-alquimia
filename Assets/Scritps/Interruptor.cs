@@ -21,7 +21,6 @@ public class Interruptor : MonoBehaviour
         if (collision.tag == "Vial")
         {
             isFree = false;
-            Debug.Log(isFree);
         }
     }
 
@@ -30,7 +29,6 @@ public class Interruptor : MonoBehaviour
         if (collision.tag == "Vial")
         {
             isFree = true;
-            Debug.Log(isFree);
         }
     }
 }
