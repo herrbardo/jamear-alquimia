@@ -356,6 +356,7 @@ GameObject:
   - component: {fileID: 1234832757569115812}
   - component: {fileID: 1234832757569115813}
   - component: {fileID: 1234832757569115820}
+  - component: {fileID: 2902792581395235414}
   m_Layer: 0
   m_Name: Vial
   m_TagString: Vial
@@ -531,6 +532,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 01470cef013d56946bcac1c77df8334a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  DelayToClose: 0.5
+  TimeToFillLiquid: 1.5
+  Tooltip: {fileID: 2902792581395235414}
   waterFiller: {fileID: 1234832757017723109}
   oilFiller: {fileID: 1234832758389876219}
   mercuryFiller: {fileID: 1234832756883401087}
@@ -538,6 +542,21 @@ MonoBehaviour:
   arsenicFiller: {fileID: 1130902537009295959}
   phosFiller: {fileID: 7175216524932353563}
   topStop: {fileID: 1234832757344343543}
+--- !u!114 &2902792581395235414
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1234832757569115814}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99634edca86565b4a96a0b7b261787f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  simpleTooltipStyle: {fileID: 11400000, guid: b60656fad1664684d8fb0085c2c6ccbb, type: 2}
+  infoLeft: 
+  infoRight: 
 --- !u!1 &1234832758101675464
 GameObject:
   m_ObjectHideFlags: 0
