@@ -1,16 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
+using System.Linq;
 
 public class VialScript : MonoBehaviour
 {
-    private int waterCounter;
-    private int oilCounter;
-    private int mercuryCounter;
-
-    private int saltCounter;
-    private int arsenicCounter;
-    private int phosCounter;
+    [SerializeField] float DelayToClose;
+    [SerializeField] float TimeToFillLiquid;
+    [SerializeField] SimpleTooltip Tooltip;
 
     public GameObject waterFiller;
     public GameObject oilFiller;
@@ -23,17 +21,10 @@ public class VialScript : MonoBehaviour
     public GameObject topStop;
 
     private bool isFull;
+    float collisionTime;
 
     void Start()
     {
-        waterCounter = 0;
-        oilCounter = 0;
-        mercuryCounter = 0;
-
-        saltCounter = 0;
-        arsenicCounter = 0;
-        phosCounter = 0;
-
         waterFiller.SetActive(false);
         oilFiller.SetActive(false);
         mercuryFiller.SetActive(false);
@@ -49,69 +40,65 @@ public class VialScript : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (!isFull)
+        if(isFull)
+            return;
+
+        string otherTag = collision.gameObject.tag;
+        List<string> powders = Enum.GetNames(typeof(Powder)).ToList();
+        List<string> elements = Enum.GetNames(typeof(Element)).ToList();
+        List<string> liquids = Enum.GetNames(typeof(Liquid)).ToList();
+
+        if(elements.Contains(otherTag))
         {
-            if (collision.gameObject.tag == "Water")
+            Tooltip.infoLeft = otherTag;
+            Invoke("SetFull", DelayToClose);
+        }
+        else if(powders.Contains(otherTag))
+        {
+            Enum.TryParse(otherTag, out Powder powder);
+            SetFull(powder);
+        }
+        else if(liquids.Contains(otherTag))
+        {
+            collisionTime += Time.time;
+
+            if(collisionTime > TimeToFillLiquid)
             {
-                waterCounter++;
-                if (waterCounter == 30)
-                {
-                    topStop.SetActive(true);
-                    waterFiller.SetActive(true);
-                    isFull = true;
-                }
-            }
-            if (collision.gameObject.tag == "Oil")
-            {
-                oilCounter++;
-                if (oilCounter == 30)
-                {
-                    topStop.SetActive(true);
-                    oilFiller.SetActive(true);
-                    isFull = true;
-                }
-            }
-            if (collision.gameObject.tag == "Mercury")
-            {
-                mercuryCounter++;
-                if (mercuryCounter == 30)
-                {
-                    topStop.SetActive(true);
-                    mercuryFiller.SetActive(true);
-                    isFull = true;
-                }
-            }
-            if (collision.gameObject.tag == "Salt")
-            {
-                saltCounter++;
-                if (saltCounter == 5)
-                {
-                    topStop.SetActive(true);
-                    saltFiller.SetActive(true);
-                    isFull = true;
-                }
-            }
-            if (collision.gameObject.tag == "Arsenic")
-            {
-                arsenicCounter++;
-                if (arsenicCounter == 5)
-                {
-                    topStop.SetActive(true);
-                    arsenicFiller.SetActive(true);
-                    isFull = true;
-                }
-            }
-            if (collision.gameObject.tag == "Phos")
-            {
-                phosCounter++;
-                if (phosCounter == 5)
-                {
-                    topStop.SetActive(true);
-                    phosFiller.SetActive(true);
-                    isFull = true;
-                }
+                Enum.TryParse(otherTag, out Liquid liquid);
+                SetFull(liquid);
             }
         }
     }
 
+    void SetFull()
+    {
+        topStop.SetActive(true);
+        isFull = true;
+    }
+
+    void SetFull(Powder powder)
+    {
+        if(powder == Powder.Salt)
+            saltFiller.SetActive(true);
+        else if(powder == Powder.Arsenic)
+            arsenicFiller.SetActive(true);
+        else if(powder == Powder.Phos)
+            phosFiller.SetActive(true);
+
+        Tooltip.infoLeft = powder.ToString();
+        SetFull();
+    }
+
+    void SetFull(Liquid liquid)
+    {
+        if(liquid == Liquid.Water)
+            waterFiller.SetActive(true);
+        else if(liquid == Liquid.Oil)
+            oilFiller.SetActive(true);
+        else if(liquid == Liquid.Mercury)
+            mercuryFiller.SetActive(true);
+        
+        Tooltip.infoLeft = liquid.ToString();
+        SetFull();
+    }
 }
