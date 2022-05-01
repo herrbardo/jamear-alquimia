@@ -71,8 +71,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -447348961
+  m_SortingLayer: 3
   m_SortingOrder: 1
   m_Sprite: {fileID: -7354169672770385130, guid: 1f7cbb2785bd319478e223468e9acd6d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -217,11 +217,11 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -447348961
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: 89657571614822243, guid: 1f7cbb2785bd319478e223468e9acd6d, type: 3}
-  m_Color: {r: 0.09959555, g: 1, b: 0, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -266,7 +266,7 @@ TargetJoint2D:
   m_BreakForce: Infinity
   m_BreakTorque: Infinity
   m_Anchor: {x: 0, y: 0}
-  m_Target: {x: 12.8, y: 0.8}
+  m_Target: {x: 13.5252695, y: 0.8116043}
   m_AutoConfigureTarget: 0
   m_MaxForce: 500
   m_DampingRatio: 1
@@ -285,7 +285,7 @@ TargetJoint2D:
   m_BreakForce: Infinity
   m_BreakTorque: Infinity
   m_Anchor: {x: 0, y: 0}
-  m_Target: {x: 11.55, y: 0.8}
+  m_Target: {x: 12.217249, y: 0.8}
   m_AutoConfigureTarget: 0
   m_MaxForce: 500
   m_DampingRatio: 1
@@ -518,8 +518,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -447348961
+  m_SortingLayer: 3
   m_SortingOrder: 2
   m_Sprite: {fileID: 7665822004125804379, guid: 1f7cbb2785bd319478e223468e9acd6d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -600,9 +600,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: -1
+  m_SortingLayerID: 47895671
+  m_SortingLayer: 1
+  m_SortingOrder: 0
   m_Sprite: {fileID: 3931923961135018461, guid: 1f7cbb2785bd319478e223468e9acd6d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

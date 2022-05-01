@@ -68,9 +68,15 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
+<<<<<<< HEAD:Assets/Prefabs/Vial.prefab
   m_SortingLayerID: -545349899
   m_SortingLayer: 5
   m_SortingOrder: 1
+=======
+  m_SortingLayerID: -447348961
+  m_SortingLayer: 3
+  m_SortingOrder: 0
+>>>>>>> 384802fcb89ac62efc45e341d5cf44c8c044b2bc:Assets/Prefabs/Elements/Vial.prefab
   m_Sprite: {fileID: -4625282147638124589, guid: d91aa6147843e2c41a588d86fab62c92, type: 3}
   m_Color: {r: 0.83921576, g: 0.64705884, b: 0.43921572, a: 1}
   m_FlipX: 0
@@ -186,9 +192,15 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
+<<<<<<< HEAD:Assets/Prefabs/Vial.prefab
   m_SortingLayerID: -545349899
   m_SortingLayer: 5
   m_SortingOrder: 1
+=======
+  m_SortingLayerID: -447348961
+  m_SortingLayer: 3
+  m_SortingOrder: 0
+>>>>>>> 384802fcb89ac62efc45e341d5cf44c8c044b2bc:Assets/Prefabs/Elements/Vial.prefab
   m_Sprite: {fileID: -4625282147638124589, guid: d91aa6147843e2c41a588d86fab62c92, type: 3}
   m_Color: {r: 0.6509804, g: 0.6509804, b: 0.6509804, a: 1}
   m_FlipX: 0
@@ -268,9 +280,15 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
+<<<<<<< HEAD:Assets/Prefabs/Vial.prefab
   m_SortingLayerID: -545349899
   m_SortingLayer: 5
   m_SortingOrder: 1
+=======
+  m_SortingLayerID: -447348961
+  m_SortingLayer: 3
+  m_SortingOrder: 0
+>>>>>>> 384802fcb89ac62efc45e341d5cf44c8c044b2bc:Assets/Prefabs/Elements/Vial.prefab
   m_Sprite: {fileID: -4625282147638124589, guid: d91aa6147843e2c41a588d86fab62c92, type: 3}
   m_Color: {r: 0, g: 0.6509804, b: 1, a: 1}
   m_FlipX: 0
@@ -307,7 +325,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1234832757344343543}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0.035, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 3719438992909779455}
@@ -532,8 +550,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 01470cef013d56946bcac1c77df8334a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DelayToClose: 0.5
-  TimeToFillLiquid: 1.5
+  DelayToClose: 1000
+  TimeToFillLiquid: 1000
   Tooltip: {fileID: 2902792581395235414}
   WaterFiller: {fileID: 1234832757017723109}
   OilFiller: {fileID: 1234832758389876219}
@@ -695,9 +713,15 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
+<<<<<<< HEAD:Assets/Prefabs/Vial.prefab
   m_SortingLayerID: -545349899
   m_SortingLayer: 5
   m_SortingOrder: 1
+=======
+  m_SortingLayerID: -447348961
+  m_SortingLayer: 3
+  m_SortingOrder: 0
+>>>>>>> 384802fcb89ac62efc45e341d5cf44c8c044b2bc:Assets/Prefabs/Elements/Vial.prefab
   m_Sprite: {fileID: -4625282147638124589, guid: d91aa6147843e2c41a588d86fab62c92, type: 3}
   m_Color: {r: 0.9058824, g: 1, b: 0.44705886, a: 1}
   m_FlipX: 0
@@ -777,9 +801,15 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
+<<<<<<< HEAD:Assets/Prefabs/Vial.prefab
   m_SortingLayerID: -545349899
   m_SortingLayer: 5
   m_SortingOrder: 1
+=======
+  m_SortingLayerID: -447348961
+  m_SortingLayer: 3
+  m_SortingOrder: 2
+>>>>>>> 384802fcb89ac62efc45e341d5cf44c8c044b2bc:Assets/Prefabs/Elements/Vial.prefab
   m_Sprite: {fileID: -6832293251284896983, guid: d91aa6147843e2c41a588d86fab62c92, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -859,9 +889,15 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
+<<<<<<< HEAD:Assets/Prefabs/Vial.prefab
   m_SortingLayerID: -545349899
   m_SortingLayer: 5
   m_SortingOrder: 0
+=======
+  m_SortingLayerID: -447348961
+  m_SortingLayer: 3
+  m_SortingOrder: 1
+>>>>>>> 384802fcb89ac62efc45e341d5cf44c8c044b2bc:Assets/Prefabs/Elements/Vial.prefab
   m_Sprite: {fileID: -548402691523525994, guid: d91aa6147843e2c41a588d86fab62c92, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -941,9 +977,15 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
+<<<<<<< HEAD:Assets/Prefabs/Vial.prefab
   m_SortingLayerID: -545349899
   m_SortingLayer: 5
   m_SortingOrder: 1
+=======
+  m_SortingLayerID: -447348961
+  m_SortingLayer: 3
+  m_SortingOrder: 0
+>>>>>>> 384802fcb89ac62efc45e341d5cf44c8c044b2bc:Assets/Prefabs/Elements/Vial.prefab
   m_Sprite: {fileID: -4625282147638124589, guid: d91aa6147843e2c41a588d86fab62c92, type: 3}
   m_Color: {r: 0.83921576, g: 0.34509805, b: 0.34509805, a: 1}
   m_FlipX: 0
@@ -1023,9 +1065,15 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
+<<<<<<< HEAD:Assets/Prefabs/Vial.prefab
   m_SortingLayerID: -545349899
   m_SortingLayer: 5
   m_SortingOrder: 1
+=======
+  m_SortingLayerID: -447348961
+  m_SortingLayer: 3
+  m_SortingOrder: 0
+>>>>>>> 384802fcb89ac62efc45e341d5cf44c8c044b2bc:Assets/Prefabs/Elements/Vial.prefab
   m_Sprite: {fileID: -4625282147638124589, guid: d91aa6147843e2c41a588d86fab62c92, type: 3}
   m_Color: {r: 0.64705884, g: 0.64705884, b: 0.64705884, a: 1}
   m_FlipX: 0
