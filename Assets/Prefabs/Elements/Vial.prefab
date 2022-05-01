@@ -532,8 +532,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 01470cef013d56946bcac1c77df8334a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DelayToClose: 0.5
-  TimeToFillLiquid: 1.5
+  DelayToClose: 1000
+  TimeToFillLiquid: 1000
   Tooltip: {fileID: 2902792581395235414}
   waterFiller: {fileID: 1234832757017723109}
   oilFiller: {fileID: 1234832758389876219}
