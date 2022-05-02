@@ -17,11 +17,9 @@ public class GameEvents
 
     public delegate void CustomerReachedSpotDelegate();
     public delegate void PotionUnlockedDelegate(Potions potion);
-    public delegate void RequestAddVialToInventoryDelegate(GameObject vial);
 
     public event CustomerReachedSpotDelegate CustomerReachedSpot;
     public event PotionUnlockedDelegate PotionUnlocked;
-    public event RequestAddVialToInventoryDelegate RequestAddVialToInventory;
 
     public void OnCustomerReachedSpot()
     {
@@ -33,11 +31,5 @@ public class GameEvents
     {
         if(PotionUnlocked != null)
             PotionUnlocked(potion);
-    }
-
-    public void OnRequestAddVialToInventory(GameObject vial)
-    {
-        if(RequestAddVialToInventory != null)
-            RequestAddVialToInventory(vial);
     }
 }

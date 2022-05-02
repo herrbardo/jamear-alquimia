@@ -6,7 +6,6 @@ public class CustomerStateManager : MonoBehaviour
 {
     [SerializeField] public float MovementSpeed;
     [SerializeField] public Transform SpotToBuy;
-    [SerializeField] public Animator Animator;
     CustomerStateBase currentState;
 
     public CustomerStateManager()
