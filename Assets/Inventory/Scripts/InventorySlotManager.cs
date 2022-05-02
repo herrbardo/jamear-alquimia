@@ -22,6 +22,9 @@ public class InventorySlotManager : MonoBehaviour
     public void AddVialToSlot(GameObject vial)
     {
         VialScript script = vial.GetComponent<VialScript>();
+        if(script.IsAttached)
+            return;
+
         vial.transform.parent = this.transform;
         script.IsAttached = true;
         this.vial = vial;
