@@ -16,9 +16,12 @@ public class VialScript : MonoBehaviour
     [SerializeField] GameObject SaltFiller;
     [SerializeField] GameObject ArsenicFiller;
     [SerializeField] GameObject PhosFiller;
+    [SerializeField] GameObject PSaltFiller;
+    [SerializeField] GameObject PArsenicFiller;
+    [SerializeField] GameObject PPhosFiller;
     [SerializeField] GameObject TopStop;
 
-    public string vialContet;
+    public string vialContent;
     bool isFull;
 
     float collisionTime;
@@ -31,6 +34,9 @@ public class VialScript : MonoBehaviour
         SaltFiller.SetActive(false);
         ArsenicFiller.SetActive(false);
         PhosFiller.SetActive(false);
+        PSaltFiller.SetActive(false);
+        PArsenicFiller.SetActive(false);
+        PPhosFiller.SetActive(false);
         TopStop.SetActive(false);
 
         isFull = false;
@@ -80,21 +86,36 @@ public class VialScript : MonoBehaviour
         if(powder == Powder.Salt)
         {
             SaltFiller.SetActive(true);
-            vialContet = "Salt";
+            vialContent = "Salt";
         }
         else if(powder == Powder.Arsenic)
         {
             ArsenicFiller.SetActive(true);
-            vialContet = "Arsenic";
+            vialContent = "Arsenic";
         }
         else if(powder == Powder.Phos)
         {
             PhosFiller.SetActive(true);
-            vialContet = "Phos";
+            vialContent = "Phos";
+        }
+        if (powder == Powder.P_Salt)
+        {
+            PSaltFiller.SetActive(true);
+            vialContent = "P Salt";
+        }
+        else if (powder == Powder.P_Arsenic)
+        {
+            PArsenicFiller.SetActive(true);
+            vialContent = "P Arsenic";
+        }
+        else if (powder == Powder.P_Phos)
+        {
+            PPhosFiller.SetActive(true);
+            vialContent = "P Phos";
         }
 
 
-        vialContet = powder.ToString();
+        vialContent = powder.ToString();
         Tooltip.infoLeft = powder.ToString();
         SetFull();
     }
@@ -102,11 +123,20 @@ public class VialScript : MonoBehaviour
     void SetFull(Liquid liquid)
     {
         if(liquid == Liquid.Water)
+        {
             WaterFiller.SetActive(true);
-        else if(liquid == Liquid.Oil)
+            vialContent = "Water";
+        }else if(liquid == Liquid.Oil)
+        {
             OilFiller.SetActive(true);
+            vialContent = "Oil";
+        }
         else if(liquid == Liquid.Mercury)
+        {
             MercuryFiller.SetActive(true);
+            vialContent = "Mercury";
+        }
+
         
         Tooltip.infoLeft = liquid.ToString();
         SetFull();

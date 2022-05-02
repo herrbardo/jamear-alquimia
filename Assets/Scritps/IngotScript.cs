@@ -18,5 +18,17 @@ public class IngotScript : MonoBehaviour
         {
             GetComponent<SpriteRenderer>().color = new Color(250f, 255f, 0f);
         }
+        if (gameObject.name == "P Bugs")
+        {
+            GetComponent<SpriteRenderer>().color = Color.grey;
+        }
+        if (gameObject.name == "P Lead")
+        {
+            GetComponent<SpriteRenderer>().color = Color.white;
+        }
+        if (gameObject.name == "P Gold")
+        {
+            GetComponent<SpriteRenderer>().color = new Color(250f, 255f, 0f);
+        }
     }
 }
