@@ -12,7 +12,6 @@ public class CustomerStateWaiting : CustomerStateBase
     public override void EnterState()
     {
         this.Context.Animator.SetBool("IsWalking", false);
-        this.Context.VoiceManager.PlayRandomClip();
     }
 
     public override void ExitState()
