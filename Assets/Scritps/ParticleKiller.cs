@@ -38,7 +38,19 @@ public class ParticleKiller : MonoBehaviour
         {
             Destroy(collision.gameObject);
         }
-        if (collision.collider.tag == "P_Arsenic")
+        if (collision.collider.name == "P_Arsenic")
+        {
+            Destroy(collision.gameObject);
+        }
+        if (collision.collider.name == "P Bugs")
+        {
+            Destroy(collision.gameObject);
+        }
+        if (collision.collider.name == "P Lead")
+        {
+            Destroy(collision.gameObject);
+        }
+        if (collision.collider.name == "P Gold")
         {
             Destroy(collision.gameObject);
         }

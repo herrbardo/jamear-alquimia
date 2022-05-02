@@ -154,6 +154,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isInput: 0
+  isPika: 0
+  isLiquidInput: 0
   inputVial: {fileID: 0}
   inputMaterial: {fileID: 0}
   arsenic: {fileID: 7645581045267859810, guid: 2e55a5d420008cc4f976e9e444c96f14, type: 3}
@@ -162,9 +164,10 @@ MonoBehaviour:
   processedArsenic: {fileID: 7645581045267859810, guid: c84c95423aa5b304b90b449a272624b6, type: 3}
   processedPhos: {fileID: 7645581045267859810, guid: 9674348045ef15e4f945c2362154ef00, type: 3}
   processedSalt: {fileID: 7645581045267859810, guid: 57e66a19768d6324da6d10898bb61588, type: 3}
-  processedBugIngot: {fileID: 0}
-  processedLeadIngot: {fileID: 0}
-  processedGoldIngot: {fileID: 0}
+  water: {fileID: 0}
+  oil: {fileID: 0}
+  mercury: {fileID: 0}
+  proccesedIngot: {fileID: 0}
 --- !u!1 &1433170615392463933
 GameObject:
   m_ObjectHideFlags: 0
@@ -5035,7 +5038,7 @@ ParticleSystemRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 821309081
-  m_SortingLayer: 3
+  m_SortingLayer: 0
   m_SortingOrder: 0
   m_RenderMode: 0
   m_SortMode: 0
@@ -5229,7 +5232,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 821309081
-  m_SortingLayer: 3
+  m_SortingLayer: 0
   m_SortingOrder: 1
   m_Sprite: {fileID: 7482667652216324306, guid: 48e93eef0688c4a259cb0eddcd8661f7, type: 3}
   m_Color: {r: 0.49056602, g: 0.43831378, b: 0.38180846, a: 1}
@@ -5567,7 +5570,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 821309081
-  m_SortingLayer: 3
+  m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 5014619818082028939, guid: 89aa6778ec9de5c45b491cab646e65cd, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -5791,7 +5794,7 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 821309081
+  m_SortingLayerID: -2091894721
   m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: -6825056225959953209, guid: c810ce72257988f4fb12295945ae015a, type: 3}
@@ -6049,6 +6052,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isInput: 1
+  isPika: 0
+  isLiquidInput: 0
   inputVial: {fileID: 0}
   inputMaterial: {fileID: 0}
   arsenic: {fileID: 7645581045267859810, guid: 2e55a5d420008cc4f976e9e444c96f14, type: 3}
@@ -6057,6 +6062,7 @@ MonoBehaviour:
   processedArsenic: {fileID: 7645581045267859810, guid: c84c95423aa5b304b90b449a272624b6, type: 3}
   processedPhos: {fileID: 7645581045267859810, guid: 9674348045ef15e4f945c2362154ef00, type: 3}
   processedSalt: {fileID: 7645581045267859810, guid: 57e66a19768d6324da6d10898bb61588, type: 3}
-  processedBugIngot: {fileID: 0}
-  processedLeadIngot: {fileID: 0}
-  processedGoldIngot: {fileID: 0}
+  water: {fileID: 0}
+  oil: {fileID: 0}
+  mercury: {fileID: 0}
+  proccesedIngot: {fileID: 0}
