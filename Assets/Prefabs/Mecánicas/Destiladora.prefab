@@ -5665,14 +5665,14 @@ EdgeCollider2D:
   - {x: 1.4482765, y: 0.4171509}
   - {x: 1.1697998, y: 0.2969787}
   - {x: 1.1872482, y: 0.16629124}
-  - {x: 1.7661572, y: -0.074401826}
+  - {x: 1.7193565, y: -0.074401826}
   - {x: 1.6039257, y: -0.1700958}
   - {x: 1.3291817, y: -0.2971739}
   - {x: 1.6094685, y: -0.4322546}
   - {x: 1.9800053, y: -0.5198379}
-  - {x: 1.4668007, y: -0.75247085}
-  - {x: 1.7338791, y: -0.8795529}
-  - {x: 2.2834587, y: -1.028936}
+  - {x: 1.4595909, y: -0.78131014}
+  - {x: 1.70504, y: -0.9228118}
+  - {x: 2.2257805, y: -1.0361458}
   m_AdjacentStartPoint: {x: 0, y: 0}
   m_AdjacentEndPoint: {x: 0, y: 0}
   m_UseAdjacentStartPoint: 0
@@ -5710,7 +5710,7 @@ EdgeCollider2D:
   - {x: 2.3232918, y: -0.0795545}
   - {x: 1.8095436, y: -0.2823808}
   - {x: 2.7434387, y: -0.38227355}
-  - {x: 2.012764, y: -0.7684488}
+  - {x: 2.0920715, y: -0.7684488}
   - {x: 2.5356946, y: -0.9297369}
   m_AdjacentStartPoint: {x: 0, y: 0}
   m_AdjacentEndPoint: {x: 0, y: 0}
@@ -5783,6 +5783,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3834203774246200554}
   - component: {fileID: 7703340176790836389}
+  - component: {fileID: 905920533531851308}
   m_Layer: 0
   m_Name: Input
   m_TagString: Untagged
@@ -5820,3 +5821,23 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.2
+--- !u!114 &905920533531851308
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7669794207902820154}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c4291a48361eb04f8896aa3fb42da69, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inputVial: {fileID: 0}
+  inputMaterial: {fileID: 0}
+  arsenic: {fileID: 7645581045267859810, guid: 2e55a5d420008cc4f976e9e444c96f14, type: 3}
+  phosphore: {fileID: 7645581045267859810, guid: c48ffa1c5c05c9b44b58ef0981e456db, type: 3}
+  salt: {fileID: 7645581045267859810, guid: 8048541eedabcc14185849a5aaaf4cf3, type: 3}
+  processedBugIngot: {fileID: 0}
+  processedLeadIngot: {fileID: 0}
+  processedGoldIngot: {fileID: 0}

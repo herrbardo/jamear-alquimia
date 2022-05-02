@@ -18,6 +18,8 @@ public class VialScript : MonoBehaviour
     public GameObject arsenicFiller;
     public GameObject phosFiller;
 
+    public string vialContet;
+
     public GameObject topStop;
 
     private bool isFull;
@@ -79,12 +81,22 @@ public class VialScript : MonoBehaviour
     void SetFull(Powder powder)
     {
         if(powder == Powder.Salt)
+        {
             saltFiller.SetActive(true);
+            //vialContet = "Salt";
+        }
         else if(powder == Powder.Arsenic)
+        {
             arsenicFiller.SetActive(true);
+            //vialContet = "Arsenic";
+        }
         else if(powder == Powder.Phos)
+        {
             phosFiller.SetActive(true);
+            //vialContet = "Phos";
+        }
 
+        vialContet = powder.ToString();
         Tooltip.infoLeft = powder.ToString();
         SetFull();
     }
