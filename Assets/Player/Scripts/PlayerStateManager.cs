@@ -8,6 +8,7 @@ public class PlayerStateManager : MonoBehaviour
     [SerializeField] List<Transform> Spots;
     [SerializeField] public Animator Animator;
     [SerializeField] public SpriteRenderer SpriteRenderer;
+    [SerializeField] public AudioSource furnaceSoundEffect;
 
     public bool FacingRight { get; private set; }
 
@@ -57,6 +58,15 @@ public class PlayerStateManager : MonoBehaviour
 
         Transform currentSpot = Spots[currentSpotIndex];
         SetState(new PlayerStateMoving(this, currentSpot));
+        if (currentSpot.gameObject.name == "SpotHorno")
+        {
+            furnaceSoundEffect.Play();
+        }
+        else
+        {
+            furnaceSoundEffect.Stop();
+        }
+
     }
 
     public void SetState(PlayerStateBase newState)

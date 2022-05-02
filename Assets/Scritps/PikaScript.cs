@@ -9,6 +9,8 @@ public class PikaScript : MonoBehaviour
     private float nextDegree; // Variable auxiliar para el temporizador
     private int spinCounter;
     public GameObject stopCollider;
+
+    public AudioSource soundEffect;
     // Start is called before the first frame update
     void Start()
     {
@@ -22,11 +24,16 @@ public class PikaScript : MonoBehaviour
         {
             nextDegree = Time.time + deltaChange;
             spinCounter++;
+            if (!soundEffect.isPlaying)
+            {
+                soundEffect.Play();
+            }
         }
         if (spinCounter >= 10)
         {
             stopCollider.SetActive(false);
             spinCounter = 0;
+            soundEffect.Stop();
             StartCoroutine(StopRestart());
         }
     }

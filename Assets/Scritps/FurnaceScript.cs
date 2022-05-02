@@ -92,7 +92,6 @@ public class FurnaceScript : MonoBehaviour
 
         if (materialSensor.detection && !proccesing)
         {
-            Debug.Log("Ingresó el material: " + materialSensor.materialDetected);
             if (materialSensor.materialInput != null)
             {
                 if (doorSensor.detection && !proccesing && (materialSensor.materialDetected == "Bugs" || materialSensor.materialDetected == "Lead" || materialSensor.materialDetected == "Gold"))
@@ -101,27 +100,21 @@ public class FurnaceScript : MonoBehaviour
                     if (materialSensor.materialDetected == "Bugs" && temp1)
                     {
                         materialSensor.materialDetected = "";
-                        Debug.Log("Se cerro con material apto dentro");
                         StartCoroutine(TiempoDeProcesado());
-                        Debug.Log("Procesando");
                         proccesing = true;
                         doorInteractor.enabled = true;
                     }
                     if (materialSensor.materialDetected == "Lead" && temp2)
                     {
                         materialSensor.materialDetected = "";
-                        Debug.Log("Se cerro con material apto dentro");
                         StartCoroutine(TiempoDeProcesado());
-                        Debug.Log("Procesando");
                         proccesing = true;
                         doorInteractor.enabled = true;
                     }
                     if (materialSensor.materialDetected == "Gold" && temp3)
                     {
                         materialSensor.materialDetected = "";
-                        Debug.Log("Se cerro con material apto dentro");
                         StartCoroutine(TiempoDeProcesado());
-                        Debug.Log("Procesando");
                         proccesing = true;
                         doorInteractor.enabled = true;
                     }
@@ -143,6 +136,5 @@ public class FurnaceScript : MonoBehaviour
         mo.tag = materialSensor.materialInput.tag + " Ingot";
         Destroy(materialSensor.materialInput);
         readyEffect.Play();
-        Debug.Log("Material Procesado");
     }
 }

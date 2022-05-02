@@ -12,7 +12,6 @@ public class Zones : MonoBehaviour
         {
             isActive = true;
         }
-        Debug.Log(collision.tag);
     }
 
     private void OnTriggerExit2D(Collider2D collision)

@@ -5,13 +5,14 @@ using UnityEngine;
 public class Activator : MonoBehaviour
 {
     public FluidSpawner fluidSpawner;
+    public AudioSource soundEffect;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.tag == "Activator")
         {
-            Debug.Log("Pouring fluids!");
             fluidSpawner.isPouring = true;
+            soundEffect.Play();
         }
     }
 
@@ -19,7 +20,6 @@ public class Activator : MonoBehaviour
     {
         if (collision.tag == "Activator")
         {
-            Debug.Log("Stopped pouring fluids!");
             fluidSpawner.isPouring = false;
         }
     }

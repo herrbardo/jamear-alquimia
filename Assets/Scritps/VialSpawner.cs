@@ -10,10 +10,16 @@ public class VialSpawner : MonoBehaviour
     private float vialRate = 1f;
     private float nextVial;
 
+    public AudioSource soundEffect;
+
     private void Update()
     {
         if (isPouring && Time.time > nextVial)
         {
+            if (!soundEffect.isPlaying)
+            {
+                soundEffect.Play();
+            }
             nextVial = Time.time + vialRate;
             Instantiate(vial, transform.position, Quaternion.identity);
             isPouring = false;

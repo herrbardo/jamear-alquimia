@@ -8,8 +8,6 @@ public class CauldronScript : MonoBehaviour
     private bool isLeft;
     private bool isRight;
     public int spoonCounter;
-    private float deltaChange = 0.5f; // Temporizador de 0.2 segundos para evitar que se dispare la temperatura, mide cada cuanto puede aumentar la T
-    private float nextDegree; // Variable auxiliar para el temporizador.
 
     public ParticleSystem gasEffect;
     public ParticleSystem potionEffect;
@@ -33,12 +31,13 @@ public class CauldronScript : MonoBehaviour
         isDone = false;
         potionEffect.Stop();
         proceed = false;
+        potionType = null;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (components.components == 3 && !proceed)
+        if (components.components == 3 && !proceed && potionType == null)
         {
             if (components.liquid == "Oil" && components.powder == "P_Phos" && components.material == "P Lead")
             {
@@ -90,11 +89,25 @@ public class CauldronScript : MonoBehaviour
                 potionType = "Fail";
             }
             proceed = true;
+            Debug.Log(components.liquid + ", " + components.powder + ", " + components.material);
+            components.liquid = null;
+            components.powder = null;
+            components.material = null;
         }
 
-        if (proceed)
+        if (isDone)
         {
-            if (spoonCounter < 30)
+            GameObject potion = Instantiate(outputPotion, potionSpawner);
+            potion.GetComponent<PotionScript>().potionType = potionType;
+            spoonCounter = 0;
+            potionEffect.Play();
+            potionType = null;
+            isDone = false;
+        }
+
+        if (proceed && !isDone)
+        {
+            if (spoonCounter < 30 && components.components == 3)
             {
                 if (right.detection && isRight)
                 {
@@ -112,20 +125,12 @@ public class CauldronScript : MonoBehaviour
             else
             {
                 isDone = true;
+                proceed = false;
             }
         }
 
         var emission = gasEffect.emission;
         emission.rateOverTime = spoonCounter;
-
-        if (isDone)
-        {
-            GameObject potion = Instantiate(outputPotion, potionSpawner);
-            potion.GetComponent<PotionScript>().potionType = potionType;
-            isDone = false;
-            spoonCounter = 0;
-            potionEffect.Play();
-        }
 
     }
 

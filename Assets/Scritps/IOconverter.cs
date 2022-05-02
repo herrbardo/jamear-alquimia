@@ -25,10 +25,6 @@ public class IOconverter : MonoBehaviour
     public GameObject oil;
     public GameObject mercury;
 
-    //public GameObject processedBugIngot;
-    //public GameObject processedLeadIngot;
-    //public GameObject processedGoldIngot;
-
     public GameObject proccesedIngot;
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -37,14 +33,12 @@ public class IOconverter : MonoBehaviour
         {
             isVial = true;
             inputVial = collision.GetComponent<VialScript>();
-            Debug.Log("Vial detectado: " + inputVial.vialContent);
             SpawnParticles(inputVial.vialContent);
         }
         if (collision.tag == "Vial" && isLiquidInput)
         {
             isVial = true;
             inputVial = collision.GetComponent<VialScript>();
-            Debug.Log("Vial detectado: " + inputVial.vialContent);
             SpawnParticles(inputVial.vialContent);
         }
         if ((collision.tag == "Bugs Ingot" || collision.tag == "Lead Ingot" || collision.tag == "Gold Ingot") && !isInput && isPika)

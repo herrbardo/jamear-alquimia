@@ -4961,7 +4961,7 @@ CapsuleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -4979,6 +4979,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da48f934e5dcce44cb68cb3ae7ed9e33, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isMixer: 1
 --- !u!1 &2718289831366672586
 GameObject:
   m_ObjectHideFlags: 0
@@ -9919,8 +9920,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 821309081
-  m_SortingLayer: 0
+  m_SortingLayerID: -2091894721
+  m_SortingLayer: 3
   m_SortingOrder: 1
   m_Sprite: {fileID: -7354169672770385130, guid: 1f7cbb2785bd319478e223468e9acd6d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -10621,6 +10622,9 @@ MonoBehaviour:
   powder: 
   liquid: 
   material: 
+  powderOk: 0
+  liquidOk: 0
+  materialOk: 0
   components: 0
   cooked: {fileID: 7278144193965016635}
 --- !u!114 &1516647189996576645
@@ -10635,3 +10639,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da48f934e5dcce44cb68cb3ae7ed9e33, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isMixer: 0
