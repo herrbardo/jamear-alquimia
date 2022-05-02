@@ -14,7 +14,7 @@ public class CustomerStateArriving : CustomerStateBase
 
     public override void EnterState()
     {
-        
+        this.Context.Animator.SetBool("IsWalking", true);
     }
 
     public override void ExitState()
