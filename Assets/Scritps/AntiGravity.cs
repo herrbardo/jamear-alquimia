@@ -21,5 +21,17 @@ public class AntiGravity : MonoBehaviour
         {
             collision.gameObject.GetComponent<Rigidbody2D>().gravityScale = gravityDirection;
         }
+        if (collision.tag == "P_Arsenic")
+        {
+            collision.gameObject.GetComponent<Rigidbody2D>().gravityScale = gravityDirection;
+        }
+        if (collision.tag == "P_Phos")
+        {
+            collision.gameObject.GetComponent<Rigidbody2D>().gravityScale = gravityDirection;
+        }
+        if (collision.tag == "P_Salt")
+        {
+            collision.gameObject.GetComponent<Rigidbody2D>().gravityScale = gravityDirection;
+        }
     }
 }

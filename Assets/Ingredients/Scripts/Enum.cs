@@ -6,7 +6,10 @@ public enum Powder
 {
     Salt,
     Arsenic,
-    Phos
+    Phos,
+    P_Salt,
+    P_Arsenic,
+    P_Phos
 }
 
 public enum Liquid
