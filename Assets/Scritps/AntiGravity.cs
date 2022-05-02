@@ -9,10 +9,17 @@ public class AntiGravity : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D collision)
     {
-        if (collision.tag == "Water")
+        if (collision.tag == "Arsenic")
         {
             collision.gameObject.GetComponent<Rigidbody2D>().gravityScale = gravityDirection;
-            Debug.Log("gravit");
+        }
+        if (collision.tag == "Phos")
+        {
+            collision.gameObject.GetComponent<Rigidbody2D>().gravityScale = gravityDirection;
+        }
+        if (collision.tag == "Salt")
+        {
+            collision.gameObject.GetComponent<Rigidbody2D>().gravityScale = gravityDirection;
         }
     }
 }

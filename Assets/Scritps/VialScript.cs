@@ -18,7 +18,9 @@ public class VialScript : MonoBehaviour
     [SerializeField] GameObject PhosFiller;
     [SerializeField] GameObject TopStop;
 
+    public string vialContet;
     bool isFull;
+
     float collisionTime;
 
     void Start()
@@ -76,12 +78,23 @@ public class VialScript : MonoBehaviour
     void SetFull(Powder powder)
     {
         if(powder == Powder.Salt)
+        {
             SaltFiller.SetActive(true);
+            vialContet = "Salt";
+        }
         else if(powder == Powder.Arsenic)
+        {
             ArsenicFiller.SetActive(true);
+            vialContet = "Arsenic";
+        }
         else if(powder == Powder.Phos)
+        {
             PhosFiller.SetActive(true);
+            vialContet = "Phos";
+        }
 
+
+        vialContet = powder.ToString();
         Tooltip.infoLeft = powder.ToString();
         SetFull();
     }
