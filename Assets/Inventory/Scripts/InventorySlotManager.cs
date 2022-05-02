@@ -17,6 +17,7 @@ public class InventorySlotManager : MonoBehaviour
     {
         if(!IsFree)
             KeepVialAttached();
+        Debug.Log(IsFree);
     }
 
     public void AddVialToSlot(GameObject vial)
