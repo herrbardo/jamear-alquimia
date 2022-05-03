@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class ParticleKiller : MonoBehaviour
 {
+    public bool isMixer;
+
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.collider.tag == "Water")
@@ -42,17 +44,20 @@ public class ParticleKiller : MonoBehaviour
         {
             Destroy(collision.gameObject);
         }
-        if (collision.collider.name == "P Bugs")
+        if (isMixer)
         {
-            Destroy(collision.gameObject);
-        }
-        if (collision.collider.name == "P Lead")
-        {
-            Destroy(collision.gameObject);
-        }
-        if (collision.collider.name == "P Gold")
-        {
-            Destroy(collision.gameObject);
+            if (collision.collider.name == "P Bugs")
+            {
+                Destroy(collision.gameObject);
+            }
+            if (collision.collider.name == "P Lead")
+            {
+                Destroy(collision.gameObject);
+            }
+            if (collision.collider.name == "P Gold")
+            {
+                Destroy(collision.gameObject);
+            }
         }
     }
 }

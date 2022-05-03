@@ -8,9 +8,9 @@ public class MaterialDetector : MonoBehaviour
     public string liquid;
     public string material;
 
-    private bool powderOk;
-    private bool liquidOk;
-    private bool materialOk;
+    public bool powderOk;
+    public bool liquidOk;
+    public bool materialOk;
 
     public int components = 0;
 
@@ -23,6 +23,7 @@ public class MaterialDetector : MonoBehaviour
             powderOk = false;
             liquidOk = false;
             materialOk = false;
+            components = 0;
         }
     }
 
@@ -70,6 +71,13 @@ public class MaterialDetector : MonoBehaviour
             }
             Destroy(collision.gameObject);
             materialOk = true;
+        }
+        if (components == 3 && cooked.isDone)
+        {
+            powderOk = false;
+            liquidOk = false;
+            materialOk = false;
+            components = 0;
         }
     }
 }
