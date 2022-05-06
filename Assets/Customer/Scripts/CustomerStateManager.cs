@@ -32,6 +32,16 @@ public class CustomerStateManager : MonoBehaviour
         this.currentState.UpdateState();
     }
 
+    private void OnCollisionEnter2D(Collision2D other)
+    {
+        this.currentState.OnCollisionEnter2D(other);
+    }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        this.currentState.OnTriggerEnter2D(other);
+    }
+
     public void SetState(CustomerStateBase newState)
     {
         if(this.currentState != null)
@@ -46,8 +56,18 @@ public class CustomerStateManager : MonoBehaviour
         SetState(new CustomerStateArriving(this, SpotToBuy));
     }
 
-    public void SetWaiting()
+    public void SetWaiting(PotionItem potionItem)
     {
-        SetState(new CustomerStateWaiting(this));
+        SetState(new CustomerStateWaiting(this, potionItem));
+    }
+
+    public void SetLeaving()
+    {
+        SetState(new CustomerStateLeaving(this));
+    }
+
+    public void DestroyAnything(GameObject anything)
+    {
+        Destroy(anything);
     }
 }

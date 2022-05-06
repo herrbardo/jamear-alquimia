@@ -13,4 +13,6 @@ public abstract class CustomerStateBase
     public abstract void AwakeState();
     public abstract void StartState();
     public abstract void UpdateState();
+    public abstract void OnCollisionEnter2D(Collision2D other);
+    public abstract void OnTriggerEnter2D(Collider2D other);
 }

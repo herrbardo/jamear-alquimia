@@ -15,18 +15,22 @@ public class GameEvents
         return instance;
     }
 
-    public delegate void CustomerReachedSpotDelegate();
+    public delegate PotionItem CustomerReachedSpotDelegate();
     public delegate void PotionUnlockedDelegate(Potions potion);
     public delegate void RequestAddVialToInventoryDelegate(GameObject vial);
+    public delegate void RequestNewCustomerDelegate();
 
     public event CustomerReachedSpotDelegate CustomerReachedSpot;
     public event PotionUnlockedDelegate PotionUnlocked;
     public event RequestAddVialToInventoryDelegate RequestAddVialToInventory;
+    public event RequestNewCustomerDelegate RequestNewCustomer;
 
-    public void OnCustomerReachedSpot()
+    public PotionItem OnCustomerReachedSpot()
     {
         if(CustomerReachedSpot!= null)
-            CustomerReachedSpot();
+            return CustomerReachedSpot();
+        
+        return null;
     }
 
     public void OnPotionUnlocked(Potions potion)
@@ -39,5 +43,11 @@ public class GameEvents
     {
         if(RequestAddVialToInventory != null)
             RequestAddVialToInventory(vial);
+    }
+
+    public void OnRequestNewCustomer()
+    {
+        if(RequestNewCustomer != null)
+            RequestNewCustomer();
     }
 }

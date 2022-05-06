@@ -8,6 +8,16 @@ public class CustomerSpawner : MonoBehaviour
     [SerializeField] Transform SpotToBuy;
     [SerializeField] float DelayToStart;
 
+    private void Awake()
+    {
+        GameEvents.GetInstance().RequestNewCustomer += SpawnCustomer;
+    }
+
+    private void OnDestroy()
+    {
+        GameEvents.GetInstance().RequestNewCustomer -= SpawnCustomer;
+    }
+
     void Start()
     {
         Invoke("SpawnCustomer", DelayToStart);

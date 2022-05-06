@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using System;
 
 public class CauldronScript : MonoBehaviour
 {
@@ -103,6 +104,9 @@ public class CauldronScript : MonoBehaviour
             potionEffect.Play();
             potionType = null;
             isDone = false;
+
+            Potions potionConverted = Convert(potionType);
+            GameEvents.GetInstance().OnPotionUnlocked(potionConverted);
         }
 
         if (proceed && !isDone)
@@ -134,5 +138,12 @@ public class CauldronScript : MonoBehaviour
 
     }
 
+    Potions Convert(string name)
+    {
+        if(name == "Healing")
+            return Potions.Health;
 
+        Enum.TryParse("Active", out Potions myStatus);
+        return myStatus;
+    }
 }

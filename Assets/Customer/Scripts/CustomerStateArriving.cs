@@ -37,6 +37,16 @@ public class CustomerStateArriving : CustomerStateBase
         MoveToTarget();
     }
 
+    public override void OnCollisionEnter2D(Collision2D other)
+    {
+        
+    }
+
+    public override void OnTriggerEnter2D(Collider2D other)
+    {
+        
+    }
+
     void MoveToTarget()
     {
         Vector3 movementDirection = (targetToArrive.position - Context.transform.position).normalized;
@@ -50,8 +60,8 @@ public class CustomerStateArriving : CustomerStateBase
         if(diffX < .1f)
         {
             this.Context.transform.position = targetToArrive.position;
-            this.Context.SetWaiting();
-            GameEvents.GetInstance().OnCustomerReachedSpot();
+            PotionItem selectedPotionItem = GameEvents.GetInstance().OnCustomerReachedSpot();
+            this.Context.SetWaiting(selectedPotionItem);
         }
     }
 }

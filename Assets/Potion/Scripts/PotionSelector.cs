@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.Linq;
 
 public class PotionSelector : MonoBehaviour
 {
@@ -25,15 +26,17 @@ public class PotionSelector : MonoBehaviour
         BubbleRenderer.enabled = PotionRenderer.enabled = false;
     }
 
-    void CustomerReachedSpot()
+    PotionItem CustomerReachedSpot()
     {
         if(Potions.Count == 0)
-            return;
+            return null;
 
         int randomIndex = Random.Range(0, Potions.Count);
         currentPotion = Potions[randomIndex];
+        //currentPotion = Potions.Where(p => p.Type == global::Potions.Health).FirstOrDefault();
 
         PotionRenderer.sprite = currentPotion.Icon;
         BubbleRenderer.enabled = PotionRenderer.enabled = true;
+        return currentPotion;
     }
 }
