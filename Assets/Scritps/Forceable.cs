@@ -22,12 +22,14 @@ public class Forceable : MonoBehaviour
     {
         isDragging = true;
         rb.drag = onUseDrag;
+        Debug.Log(isDragging);
     }
 
     private void OnMouseUp()
     {
         isDragging = false;
         rb.drag = onIdleDrag;
+        Debug.Log(isDragging);
     }
 
     private void FixedUpdate()
@@ -39,4 +41,5 @@ public class Forceable : MonoBehaviour
             Debug.DrawLine(transform.position, Camera.main.ScreenToWorldPoint(Input.mousePosition));
         }
     }
+
 }

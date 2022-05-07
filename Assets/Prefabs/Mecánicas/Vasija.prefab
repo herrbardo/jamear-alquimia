@@ -144,7 +144,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -512382503
-  m_SortingLayer: 2
+  m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: -7025635439332172163, guid: 9c94457a6003b474781a8d929940ddfc, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -276,7 +276,7 @@ TargetJoint2D:
   m_BreakForce: Infinity
   m_BreakTorque: Infinity
   m_Anchor: {x: 0, y: 0}
-  m_Target: {x: 10.011, y: 1.4386923}
+  m_Target: {x: 9.011, y: 1.5179999}
   m_AutoConfigureTarget: 1
   m_MaxForce: 100
   m_DampingRatio: 1
@@ -311,7 +311,7 @@ HingeJoint2D:
   m_BreakTorque: Infinity
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0, y: 0}
-  m_ConnectedAnchor: {x: -0.9619999, y: 0.24899995}
+  m_ConnectedAnchor: {x: -0.96200085, y: 0.24899995}
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0
@@ -330,10 +330,10 @@ GameObject:
   m_Component:
   - component: {fileID: 7023268761501569190}
   - component: {fileID: 7023268761501569189}
-  - component: {fileID: 7023268761501569114}
   - component: {fileID: 7023268761501569115}
   - component: {fileID: 7023268761501569188}
   - component: {fileID: 5432135975866512915}
+  - component: {fileID: 3768913597652759894}
   m_Layer: 0
   m_Name: Cuerpo
   m_TagString: Untagged
@@ -395,7 +395,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 821309081
-  m_SortingLayer: 3
+  m_SortingLayer: 0
   m_SortingOrder: 1
   m_Sprite: {fileID: -3503150607954461392, guid: 9c94457a6003b474781a8d929940ddfc, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -408,33 +408,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!68 &7023268761501569114
-EdgeCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7023268761501569191}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_EdgeRadius: 0
-  m_Points:
-  - {x: -0.6878176, y: 0.1681472}
-  - {x: -0.55259895, y: -0.031499386}
-  - {x: -0.29958534, y: -0.16031456}
-  - {x: 0.07481098, y: -0.25558376}
-  - {x: 0.53729343, y: -0.20026135}
-  - {x: 0.8417406, y: -0.06823599}
-  - {x: 1.0241117, y: 0.15469539}
-  m_AdjacentStartPoint: {x: 0, y: 0}
-  m_AdjacentEndPoint: {x: 0, y: 0}
-  m_UseAdjacentStartPoint: 0
-  m_UseAdjacentEndPoint: 0
 --- !u!50 &7023268761501569115
 Rigidbody2D:
   serializedVersion: 4
@@ -471,7 +444,7 @@ HingeJoint2D:
   m_BreakTorque: Infinity
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 1.0761423, y: 0.174873}
-  m_ConnectedAnchor: {x: 12.049142, y: 1.3645654}
+  m_ConnectedAnchor: {x: 11.049143, y: 1.4438729}
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0
@@ -493,12 +466,53 @@ TargetJoint2D:
   m_ConnectedRigidBody: {fileID: 0}
   m_BreakForce: Infinity
   m_BreakTorque: Infinity
-  m_Anchor: {x: 1, y: 0.1}
+  m_Anchor: {x: 1.0791178, y: 0.17911732}
   m_Target: {x: 12, y: 1.3}
   m_AutoConfigureTarget: 0
   m_MaxForce: 10000
   m_DampingRatio: 1
   m_Frequency: 5
+--- !u!60 &3768913597652759894
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7023268761501569191}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 2.25, y: 0.9}
+    newSize: {x: 2.25, y: 0.9}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: -0.454921, y: -0.13895874}
+      - {x: -0.18479538, y: -0.24822712}
+      - {x: 0.12695575, y: -0.3022902}
+      - {x: 0.42068386, y: -0.2492252}
+      - {x: 0.6533232, y: -0.21630341}
+      - {x: 0.88827133, y: -0.0793339}
+      - {x: 1.0788783, y: 0.13353631}
+      - {x: 1.059947, y: 0.18398166}
+      - {x: 0.84107876, y: -0.02846849}
+      - {x: 0.6146774, y: -0.09513414}
+      - {x: 0.39860058, y: -0.14211357}
+      - {x: 0.115014076, y: -0.1723147}
+      - {x: -0.12344074, y: -0.13734132}
+      - {x: -0.39251423, y: -0.06488228}
+      - {x: -0.7203827, y: 0.19996989}
+      - {x: -0.76404077, y: 0.17120093}
 --- !u!1 &7023268761929195357
 GameObject:
   m_ObjectHideFlags: 0
@@ -568,7 +582,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 821309081
-  m_SortingLayer: 3
+  m_SortingLayer: 0
   m_SortingOrder: 1
   m_Sprite: {fileID: -4682317894732872030, guid: 9c94457a6003b474781a8d929940ddfc, type: 3}
   m_Color: {r: 1, g: 0, b: 0.7406688, a: 1}
