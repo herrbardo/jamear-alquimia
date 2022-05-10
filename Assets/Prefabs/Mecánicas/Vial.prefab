@@ -357,9 +357,9 @@ GameObject:
   - component: {fileID: 1234832757569115810}
   - component: {fileID: 1234832757569115811}
   - component: {fileID: 1234832757569115812}
+  - component: {fileID: 1234832757569115813}
   - component: {fileID: 1234832757569115820}
   - component: {fileID: 2902792581395235414}
-  - component: {fileID: 7475319018570056813}
   m_Layer: 0
   m_Name: Vial
   m_TagString: Vial
@@ -510,6 +510,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.15706635, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &1234832757569115813
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1234832757569115814}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f5eba34252243748addd16c0338b57f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rb: {fileID: 1234832757569115808}
 --- !u!114 &1234832757569115820
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -551,21 +564,6 @@ MonoBehaviour:
   simpleTooltipStyle: {fileID: 11400000, guid: b60656fad1664684d8fb0085c2c6ccbb, type: 2}
   infoLeft: 
   infoRight: 
---- !u!114 &7475319018570056813
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1234832757569115814}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 898c533899bdce34d90b38398f5df601, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rb: {fileID: 0}
-  onUseDrag: 20
-  onIdleDrag: 0.05
 --- !u!1 &1234832758101675464
 GameObject:
   m_ObjectHideFlags: 0
@@ -636,7 +634,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da48f934e5dcce44cb68cb3ae7ed9e33, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isMixer: 0
 --- !u!1 &1234832758389876219
 GameObject:
   m_ObjectHideFlags: 0

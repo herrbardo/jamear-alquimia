@@ -1,14 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using System;
 
 public class Forceable : MonoBehaviour
 {
     public Rigidbody2D rb;
     private Vector2 forceVector = Vector2.zero;
-
-    [NonSerialized] public bool isDragging = false;
+    private bool isDragging = false;
     private float magnitude = 100f;
 
     public float onUseDrag;
