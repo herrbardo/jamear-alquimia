@@ -99,7 +99,8 @@ public class CauldronScript : MonoBehaviour
         if (isDone)
         {
             GameObject potion = Instantiate(outputPotion, potionSpawner);
-            potion.GetComponent<PotionScript>().potionType = potionType;
+            //TODO Remplazar acá también
+            //potion.GetComponent<PotionScript>().potionType = potionType;
             spoonCounter = 0;
             potionEffect.Play();
             potionType = null;

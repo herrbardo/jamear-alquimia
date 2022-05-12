@@ -51,16 +51,17 @@ public class CustomerStateWaiting : CustomerStateBase
             if(potionScript != null)
             {
                 string name = ConvertName(this.potionItem.Type);
-                if(potionScript.potionType == name)
-                {       
-                    this.Context.DestroyAnything(other.gameObject);
-                    GameEvents.GetInstance().OnRequestNewCustomer();
-                    this.Context.SetLeaving();
-                }
-                else
-                {
-                    this.Context.VoiceManager.PlayRandomClip();
-                }
+                //TODO ARREGLAR ESTO!!
+                // if(potionScript.potionType == name)
+                // {       
+                //     this.Context.DestroyAnything(other.gameObject);
+                //     GameEvents.GetInstance().OnRequestNewCustomer();
+                //     this.Context.SetLeaving();
+                // }
+                // else
+                // {
+                //     this.Context.VoiceManager.PlayRandomClip();
+                // }
             }
         }
     }

@@ -4,62 +4,51 @@ using UnityEngine;
 
 public class PotionScript : MonoBehaviour
 {
-    public string potionType;
-
-    public GameObject healing;
-    public GameObject strength;
-    public GameObject poison;
-    public GameObject nightVision;
-    public GameObject invisibility;
-    public GameObject love;
-    public GameObject weakness;
-    public GameObject fortune;
-    public GameObject antidote;
-    public GameObject fail;
+    [SerializeField] List<Sprite> PotionSprites;
+    [SerializeField] Potions Type;
+    [SerializeField] SpriteRenderer SpriteRenderer;
 
     void Start()
     {
-        if (potionType == "Healing")
+        switch(Type)
         {
-            healing.SetActive(true);
-        }
-        if (potionType == "Strength")
-        {
-            strength.SetActive(true);
-        }
-        if (potionType == "Poison")
-        {
-            poison.SetActive(true);
-        }
-        if (potionType == "NightVision")
-        {
-            nightVision.SetActive(true);
-        }
-        if (potionType == "Invisibility")
-        {
-            invisibility.SetActive(true);
-        }
-        if (potionType == "Love")
-        {
-            love.SetActive(true);
-        }
-        if (potionType == "Weakness")
-        {
-            weakness.SetActive(true);
-        }
-        if (potionType == "Fortune")
-        {
-            fortune.SetActive(true);
-        }
-        if (potionType == "Antidote")
-        {
-            antidote.SetActive(true);
-        }
-        if (potionType == "Fail")
-        {
-            fail.SetActive(true);
+            default:
+            case Potions.Health:
+                SpriteRenderer.sprite = PotionSprites[0];
+            break;
+
+            case Potions.Strength:
+                SpriteRenderer.sprite = PotionSprites[0];
+            break;
+
+            case Potions.Poison:
+                SpriteRenderer.sprite = PotionSprites[0];
+            break;
+
+            case Potions.NightVision:
+                SpriteRenderer.sprite = PotionSprites[0];
+            break;
+
+            case Potions.Invisibility:
+                SpriteRenderer.sprite = PotionSprites[0];
+            break;
+
+            case Potions.Love:
+                SpriteRenderer.sprite = PotionSprites[0];
+            break;
+
+            case Potions.Weakness:
+                SpriteRenderer.sprite = PotionSprites[0];
+            break;
+
+            case Potions.Fortune:
+                SpriteRenderer.sprite = PotionSprites[0];
+            break;
+
+            case Potions.Antidote:
+                SpriteRenderer.sprite = PotionSprites[0];
+            break;
         }
     }
-
 
 }
