@@ -12,5 +12,6 @@ public enum Potions
     Love,
     Weakness,
     Fortune,
-    Antidote
+    Antidote,
+    Fail
 }

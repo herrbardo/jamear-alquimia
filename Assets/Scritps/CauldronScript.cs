@@ -17,7 +17,7 @@ public class CauldronScript : MonoBehaviour
     public bool isDone;
 
     public GameObject outputPotion;
-    private string potionType;
+    private Potions potionType;
     private string liquid;
     private string powder;
     private string material;
@@ -32,62 +32,61 @@ public class CauldronScript : MonoBehaviour
         isDone = false;
         potionEffect.Stop();
         proceed = false;
-        potionType = null;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (components.components == 3 && !proceed && potionType == null)
+        if (components.components == 3 && !proceed)
         {
             if (components.liquid == "Oil" && components.powder == "P_Phos" && components.material == "P Lead")
             {
-                potionType = "Strength";
+                potionType = Potions.Strength;
             }
             else if (components.liquid == "Water" && components.powder == "P_Salt" && components.material == "P Gold")
             {
                 //curacion
-                potionType = "Healing";
+                potionType = Potions.Health;
             }
             else if (components.liquid == "Oil" && components.powder == "P_Arsenic" && components.material == "P Lead")
             {
                 //veneno
-                potionType = "Poison";
+                potionType = Potions.Poison;
             }
             else if (components.liquid == "Mercury" && components.powder == "P_Phos" && components.material == "P Bugs")
             {
                 //vision noc
-                potionType = "NightVision";
+                potionType = Potions.NightVision;
             }
             else if (components.liquid == "Mercury" && components.powder == "P_Arsenic" && components.material == "P Bugs")
             {
                 //invisi
-                potionType = "Invisibility";
+                potionType = Potions.Invisibility;
             }
             else if (components.liquid == "Water" && components.powder == "P_Arsenic" && components.material == "P Gold")
             {
                 //amor
-                potionType = "Love";
+                potionType = Potions.Love;
             }
             else if (components.liquid == "Mercury" && components.powder == "P_Phos" && components.material == "P Bugs")
             {
                 //debili
-                potionType = "Weakness";
+                potionType = Potions.Weakness;
             }
             else if (components.liquid == "Oil" && components.powder == "P_Salt" && components.material == "P Gold")
             {
                 //fortuna
-                potionType = "Fortune";
+                potionType = Potions.Fortune;
             }
             else if (components.liquid == "Water" && components.powder == "P_Salt" && components.material == "P Lead")
             {
                 //anitdot
-                potionType = "Antidote";
+                potionType = Potions.Antidote;
             }
             else
             {
                 //fail
-                potionType = "Fail";
+                potionType = Potions.Fail;
             }
             proceed = true;
             Debug.Log(components.liquid + ", " + components.powder + ", " + components.material);
@@ -99,15 +98,12 @@ public class CauldronScript : MonoBehaviour
         if (isDone)
         {
             GameObject potion = Instantiate(outputPotion, potionSpawner);
-            //TODO Remplazar acá también
-            //potion.GetComponent<PotionScript>().potionType = potionType;
+            potion.GetComponent<PotionScript>().Type = potionType;
             spoonCounter = 0;
             potionEffect.Play();
-            potionType = null;
-            isDone = false;
+            isDone = false;//
 
-            Potions potionConverted = Convert(potionType);
-            GameEvents.GetInstance().OnPotionUnlocked(potionConverted);
+            GameEvents.GetInstance().OnPotionUnlocked(potionType);
         }
 
         if (proceed && !isDone)
@@ -137,14 +133,5 @@ public class CauldronScript : MonoBehaviour
         var emission = gasEffect.emission;
         emission.rateOverTime = spoonCounter;
 
-    }
-
-    Potions Convert(string name)
-    {
-        if(name == "Healing")
-            return Potions.Health;
-
-        Enum.TryParse("Active", out Potions myStatus);
-        return myStatus;
     }
 }

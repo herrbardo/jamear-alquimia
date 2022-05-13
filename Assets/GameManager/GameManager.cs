@@ -6,6 +6,7 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
     [SerializeField] float DelayToStart;
+    [SerializeField] public bool EnableCheats;
 
     private void Awake()
     {

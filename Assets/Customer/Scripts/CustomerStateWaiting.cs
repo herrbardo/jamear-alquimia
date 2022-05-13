@@ -50,31 +50,15 @@ public class CustomerStateWaiting : CustomerStateBase
             PotionScript potionScript = other.gameObject.GetComponent<PotionScript>();
             if(potionScript != null)
             {
-                string name = ConvertName(this.potionItem.Type);
-                //TODO ARREGLAR ESTO!!
-                // if(potionScript.potionType == name)
-                // {       
-                //     this.Context.DestroyAnything(other.gameObject);
-                //     GameEvents.GetInstance().OnRequestNewCustomer();
-                //     this.Context.SetLeaving();
-                // }
-                // else
-                // {
-                //     this.Context.VoiceManager.PlayRandomClip();
-                // }
+                if(potionScript.Type == this.potionItem.Type)
+                {       
+                    this.Context.DestroyAnything(other.gameObject);
+                    GameEvents.GetInstance().OnRequestNewCustomer();
+                    this.Context.SetLeaving();
+                }
+                else
+                    this.Context.VoiceManager.PlayRandomClip();
             }
-        }
-    }
-
-    string ConvertName(Potions potion)
-    {
-        switch(potion)
-        {
-            case Potions.Health:
-                return "Healing";
-            
-            default:
-                return potion.ToString();
         }
     }
 }

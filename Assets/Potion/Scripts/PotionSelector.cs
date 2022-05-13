@@ -14,11 +14,13 @@ public class PotionSelector : MonoBehaviour
     private void Awake()
     {
         GameEvents.GetInstance().CustomerReachedSpot += CustomerReachedSpot;
+        GameEvents.GetInstance().RequestNewCustomer += RequestNewCustomer;
     }
 
     private void OnDestroy()
     {
         GameEvents.GetInstance().CustomerReachedSpot -= CustomerReachedSpot;
+        GameEvents.GetInstance().RequestNewCustomer -= RequestNewCustomer;
     }
 
     void Start()
@@ -33,10 +35,14 @@ public class PotionSelector : MonoBehaviour
 
         int randomIndex = Random.Range(0, Potions.Count);
         currentPotion = Potions[randomIndex];
-        //currentPotion = Potions.Where(p => p.Type == global::Potions.Health).FirstOrDefault();
 
         PotionRenderer.sprite = currentPotion.Icon;
         BubbleRenderer.enabled = PotionRenderer.enabled = true;
         return currentPotion;
+    }
+
+    void RequestNewCustomer()
+    {
+        BubbleRenderer.enabled = PotionRenderer.enabled = false;
     }
 }
