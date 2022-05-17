@@ -18,12 +18,12 @@ public class UIEvents
         return instance;
     }
 
-    public delegate void UIButtonPressedDelegate(string buttonName);
+    public delegate void UIButtonPressedDelegate(string buttonName, bool enabledSwitch);
     public UIButtonPressedDelegate UIButtonPressed;
 
-    public void OnUIButtonPressed(string buttonName)
+    public void OnUIButtonPressed(string buttonName, bool enabledSwitch)
     {
         if(UIButtonPressed != null)
-            UIButtonPressed(buttonName);
+            UIButtonPressed(buttonName, enabledSwitch);
     }
 }

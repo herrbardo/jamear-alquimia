@@ -22,14 +22,8 @@ public class GameManager : MonoBehaviour
     }
 
 
-    void Start()
+    public void Exit()
     {
-        
-    }
-
-    
-    void Update()
-    {
-        
+        TransitionEvents.GetInstance().OnTransitionToScene("MainMenu");
     }
 }

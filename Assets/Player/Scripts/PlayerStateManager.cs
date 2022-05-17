@@ -42,7 +42,7 @@ public class PlayerStateManager : MonoBehaviour
         this.currentState.UpdateState();
     }
 
-    void Button_Click(string buttonName)
+    void Button_Click(string buttonName, bool enabledSwitch)
     {
         if(buttonName == "BtnRight" && currentSpotIndex < (Spots.Count - 1 ))
         {
